@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
+  
     // Background elements animation
     tl.fromTo(
       [bgLeftRef.current, bgRightRef.current],
@@ -107,9 +107,12 @@ const App: React.FC = () => {
         },
         "-=0.2"
       );
-
-    return () => tl.kill();
+  
+    return () => {
+      tl.kill();
+    };
   }, []);
+  
 
   return (
     <main className="bg-[#050505] min-h-screen overflow-hidden">
