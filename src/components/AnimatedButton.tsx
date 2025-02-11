@@ -9,9 +9,9 @@ const AnimatedButton: React.FC = () => {
         style={{ width: "1rem", height: "1rem" }}
       >
         {/* Image 1: Initially visible */}
-        <img src="../public/cross.svg" alt="icon" className="image1" />
+        <img src="/cross.svg" alt="icon" className="image1" />
         {/* Image 2: Initially positioned below with a diagonal offset */}
-        <img src="../public/cross.svg" alt="icon" className="image2" />
+        <img src="/cross.svg" alt="icon" className="image2" />
       </div>
 
       <style >{`

@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import logo from "../public/logo.png";
+import logo from "/logo.png";
 import FloatingDots from "./animation";
 import AnimatedButton from "./components/AnimatedButton";
 import gsap from "gsap";
@@ -117,10 +117,10 @@ const App: React.FC = () => {
   return (
     <main className="bg-[#050505] min-h-screen overflow-hidden">
       {/* Background Section */}
-      <div className="bg-[url(../public/up.svg)] flex md:justify-between relative w-full h-[30%] bg-cover bg-no-repeat">
+      <div className="bg-[url(/up.svg)] flex md:justify-between relative w-full h-[30%] bg-cover bg-no-repeat">
         <div ref={bgLeftRef}>
           <img
-            src="../public/left.svg"
+            src="/left.svg"
             alt="Left design"
             className="lg:-mt-52 lg:-ml-28 md:-m-16 md:ml-0 w-[950px] md:w-[800px]"
           />
@@ -128,7 +128,7 @@ const App: React.FC = () => {
         <img src={logo} alt="Logo" className="w-36 absolute top-7 mx-6 md:mx-24" />
         <div ref={bgRightRef} className="lg:-mr-20">
           <img
-            src="../public/right.svg"
+            src="/right.svg"
             alt="Right design"
             className="lg:-mt-52 lg:-mr-32 md:-m-16 md:mr-0 w-[950px] md:w-[800px]"
           />
@@ -138,8 +138,8 @@ const App: React.FC = () => {
       {/* Floating Dots Section */}
       <div ref={floatingDotsRef} className="flex flex-col items-center -mt-18">
         <FloatingDots>
-          <div className="bg-[url(../public/glow.svg)] h-[120px] bg-center bg-contain bg-no-repeat mt-10 flex justify-center items-center">
-            <img src="../public/minilogo.svg" alt="Mini logo" className="w-[45px] h-[45px]" />
+          <div className="bg-[url(/glow.svg)] h-[120px] bg-center bg-contain bg-no-repeat mt-10 flex justify-center items-center">
+            <img src="/minilogo.svg" alt="Mini logo" className="w-[45px] h-[45px]" />
           </div>
         </FloatingDots>
         <p ref={subtitleRef} className="rounded-xl bg-[#0f0f0f] text-white text-center text-sm p-1">
@@ -152,7 +152,7 @@ const App: React.FC = () => {
         <div ref={firstCardsRef} className="w-full flex justify-center items-center md:gap-[25%] overflow-hidden">
           <div className="flex flex-col">
             <div className="w-full flex justify-end">
-              <img src="../public/arrowl.svg" alt="Left arrow" className="w-5" />
+              <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
             </div>
             <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl w-40 h-14">
               Crypto Index Fund
@@ -161,7 +161,7 @@ const App: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <div className="w-full flex">
-              <img src="../public/arrowr.svg" alt="Right arrow" className="w-5" />
+              <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
             </div>
             <div className="text-center md:ml-3 text-white p-2 bg-[#191919] rounded-xl w-44 h-14">
               Memecoins Basket
@@ -185,7 +185,7 @@ const App: React.FC = () => {
           <div className="flex md:w-[70%] mx-auto justify-between items-center">
             <div className="flex flex-col xl:-mt-32 md:ml-16">
               <div className="w-full flex justify-end">
-                <img src="../public/arrowl.svg" alt="Left arrow" className="w-5" />
+                <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
               </div>
               <div className="text-center mr-3 text-white p-2 bg-[#191919] rounded-xl w-32 h-14">
                 US Coins ETF
@@ -194,7 +194,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-col  xl:-mt-32">
               <div className="w-full flex">
-                <img src="../public/arrowr.svg" alt="Right arrow" className="w-5" />
+                <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
               </div>
               <div className="text-center ml-3 text-white p-2 bg-[#191919] rounded-xl w-44 h-14">
                 ETH Oscillator Agent
@@ -206,13 +206,13 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-[url(../public/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-5 overflow-hidden">
+      <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-5 overflow-hidden">
         <div ref={footerRef} className="flex mt-10 items-center justify-center gap-4">
           <AnimatedButton />
           <button className="w-42 text-center flex items-center justify-center cursor-pointer h-12 rounded-4xl gap-2 bg-[#0f0f0f] text-[#a1e00d] p-3">
             <p>Follow us on X</p>
             <div className="bg-black rounded-4xl p-1">
-              <img src="../public/cross.svg" alt="Cross icon" className="rotate-img text-[20px]" />
+              <img src="/cross.svg" alt="Cross icon" className="rotate-img text-[20px]" />
             </div>
           </button>
         </div>
