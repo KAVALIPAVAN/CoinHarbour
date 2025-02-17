@@ -1,9 +1,9 @@
 import React from "react";
 
-const AnimatedButton: React.FC = () => {
+const AnimatedButton: React.FC = ({txt}) => {
   return (
     <button className="flex cursor-pointer w-40 h-11 items-center justify-center gap-1 rounded-4xl bg-[#a1e00d] p-3 overflow-hidden relative">
-      <p className="font-medium">Launch App</p>
+      <p className="font-medium">{txt}</p>
       <div
         className="relative bg-black rounded-4xl  overflow-hidden"
         style={{ width: "1rem", height: "1rem" }}

@@ -1,4 +1,5 @@
 
+import Bottom from "./pages/Bottom"
 import Create from "./pages/Create"
 import Feature from "./pages/Feature"
 import Home from "./pages/Home"
@@ -14,6 +15,7 @@ const App = () => {
     <Invest/>
     <Create/>
     <Questions/>
+    <Bottom/>
     </div>
   )
 }

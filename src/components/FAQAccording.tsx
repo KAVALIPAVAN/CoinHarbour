@@ -10,8 +10,8 @@ interface PlusMinusIconProps {
 const PlusMinusIcon: React.FC<PlusMinusIconProps> = ({ active }) => {
   const containerStyle = {
     position: "relative" as const,
-    width: "25px",
-    height: "25px",
+    width: "20px",
+    height: "20px",
     cursor: "pointer",
   };
 
@@ -19,23 +19,23 @@ const PlusMinusIcon: React.FC<PlusMinusIconProps> = ({ active }) => {
     position: "absolute" as const,
     top: "50%",
     left: 0,
-    width: "100%",
-    height: "3px",
+    width: "90%",
+    height: "2px",
   };
 
   // Horizontal line (the "before" element)
   const horizontalAnimation = active
-    ? { 
-        rotate: -90, 
-        opacity: 0, 
-        backgroundColor: "#ADFF00", 
-        transition: { duration: 0.35 } 
+    ? {
+        rotate: -90,
+        opacity: 0,
+        backgroundColor: "#ADFF00",
+        transition: { duration: 0.35 },
       }
-    : { 
-        rotate: 0, 
-        opacity: 1, 
-        backgroundColor: "#333", 
-        transition: { duration: 0.35 } 
+    : {
+        rotate: 0,
+        opacity: 1,
+        backgroundColor: "#f7eded",
+        transition: { duration: 0.35 },
       };
 
   // Vertical line (the "after" element) animates with keyframes for multiple rounds.
@@ -49,7 +49,7 @@ const PlusMinusIcon: React.FC<PlusMinusIconProps> = ({ active }) => {
       }
     : {
         rotate: 90,
-        backgroundColor: "#333",
+        backgroundColor: "#f7eded",
         transition: { duration: 0.35 },
       };
 
@@ -81,7 +81,8 @@ const faqData: FAQItem[] = [
     id: "02",
     number: "02",
     question: "Is CoinHarbour suitable for beginners in investing?",
-    answer: "Yes, CoinHarbour is designed to be accessible for both beginners and experienced investors.",
+    answer:
+      "Absolutely! CoinHarbour is designed for everyone, from beginners to seasoned investors. With our automated solutions, you can start with as little as $10 and grow your wealth without prior investment experience.",
   },
   {
     id: "03",
@@ -93,32 +94,38 @@ const faqData: FAQItem[] = [
   {
     id: "04",
     number: "04",
-    question: "Do I need to pay any upfront fees or sign up for a subscription?",
-    answer: "Contact our support team for detailed information about our fee structure.",
+    question:
+      "Do I need to pay any upfront fees or sign up for a subscription?",
+    answer:
+      "No, there are no subscription fees or upfront costs. You only pay a small fee when you exit an algorithm, but only if it has generated profits for you.",
   },
   {
     id: "05",
     number: "05",
     question: "Can I withdraw my money anytime with CoinHarbour?",
-    answer: "Yes, you have full control over your investments and can withdraw at any time.",
+    answer:
+      "Yes, you have complete control over your funds. Withdraw your investments anytime without penalties, ensuring liquidity and flexibility.",
   },
   {
     id: "06",
     number: "06",
     question: "How much time does it take to start investing with CoinHarbour?",
-    answer: "The process is quick and straightforward, typically taking just a few minutes to get started.",
+    answer:
+      "Signing up and starting your first investment takes less than 5 minutes. Our automated platform handles the rest, so you can sit back and let your wealth grow.",
   },
   {
     id: "07",
     number: "07",
     question: "Is CoinHarbour non-custodial?",
-    answer: "Please refer to our documentation for detailed information about our custody model.",
+    answer:
+      "Absolutely. CoinHarbour gives you full control over your assets. You retain custody of your funds while our algorithms work to optimize your investments in a secure, decentralized environment.",
   },
   {
     id: "08",
     number: "08",
     question: "Can I connect my crypto wallet to CoinHarbour?",
-    answer: "Yes, we support various crypto wallet connections for seamless integration.",
+    answer:
+      "Yes, CoinHarbour is fully wallet-compatible. Connect your Web3 wallet (like MetaMask) to start investing seamlessly, without the need for traditional bank accounts or intermediaries.",
   },
 ];
 
@@ -134,28 +141,44 @@ export default function FAQAccordion() {
   const group2 = faqData.slice(4);
 
   return (
-    <div className="min-h-screen bg-black p-6 md:p-12">
+    <div className=" bg-black p-6 ">
       <div className="mx-auto max-w-7xl">
         {/* Parent flex container for two groups */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row lg:gap-6">
           {/* Group 1 */}
-          <div className="flex-1 flex flex-col gap-6">
+          <div className="flex-1 flex flex-col ">
             {group1.map((item) => (
-              <motion.div key={item.id} className="rounded-lg bg-zinc-900/50 p-6">
+              <motion.div
+                key={item.id}
+                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""}  p-6 border border-[#141414]`}
+              >
                 <button
                   onClick={() => handleToggle(item.id)}
-                  className="flex w-full items-center justify-between"
+                  className="flex w-full items-center justify-between border-[#141414]"
                 >
                   <div className="flex items-center gap-4">
-                    <span className={`text-sm ${activeId === item.id ? "text-[#ADFF00]" : "text-zinc-500"}`}>
+                    <span
+                      className={`text-xl font-bold ${
+                        activeId === item.id ? "text-[#ADFF00]" : "text-white"
+                      }`}
+                    >
                       {item.number}
                     </span>
-                    <h3 className={`text-left text-lg ${activeId === item.id ? "text-[#ADFF00]" : "text-white"}`}>
+                    <h3
+                      className={`text-left text-lg ${
+                        activeId === item.id ? "text-[#ADFF00]" : "text-white"
+                      }`}
+                    >
                       {item.question}
                     </h3>
                   </div>
-                  <PlusMinusIcon active={activeId === item.id} />
+
+                  {/* This div will stay at the right end */}
+                  <div className="bg-[#0f0f0f] p-2 flex items-center justify-center border border-[#141414] rounded-full ml-auto">
+                    <PlusMinusIcon active={activeId === item.id} />
+                  </div>
                 </button>
+
                 <AnimatePresence mode="wait">
                   {activeId === item.id && (
                     <motion.div
@@ -166,7 +189,7 @@ export default function FAQAccordion() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-4 text-zinc-400">{item.answer}</p>
+                      <p className="mt-4 text-[#b3b3b3] text-md font-semibold">{item.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -174,22 +197,35 @@ export default function FAQAccordion() {
             ))}
           </div>
           {/* Group 2 */}
-          <div className="flex-1 flex flex-col gap-6">
+          <div className="flex-1 flex flex-col ">
             {group2.map((item) => (
-              <motion.div key={item.id} className="rounded-lg bg-zinc-900/50 p-6">
+              <motion.div
+                key={item.id}
+                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""}  p-6 border border-[#141414]`}
+              >
                 <button
                   onClick={() => handleToggle(item.id)}
                   className="flex w-full items-center justify-between"
                 >
                   <div className="flex items-center gap-4">
-                    <span className={`text-sm ${activeId === item.id ? "text-[#ADFF00]" : "text-zinc-500"}`}>
+                    <span
+                      className={`text-xl font-bold ${
+                        activeId === item.id ? "text-[#ADFF00]" : "text-white"
+                      }`}
+                    >
                       {item.number}
                     </span>
-                    <h3 className={`text-left text-lg ${activeId === item.id ? "text-[#ADFF00]" : "text-white"}`}>
+                    <h3
+                      className={`text-left text-lg ${
+                        activeId === item.id ? "text-[#ADFF00]" : "text-white"
+                      }`}
+                    >
                       {item.question}
                     </h3>
                   </div>
-                  <PlusMinusIcon active={activeId === item.id} />
+                  <div className="bg-[#0f0f0f] p-2 flex items-center justify-center border border-[#141414] rounded-full ml-auto">
+                    <PlusMinusIcon active={activeId === item.id} />
+                  </div>
                 </button>
                 <AnimatePresence mode="wait">
                   {activeId === item.id && (
@@ -201,7 +237,7 @@ export default function FAQAccordion() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-4 text-zinc-400">{item.answer}</p>
+                      <p className="mt-4 text-[#b3b3b3] text-md font-semibold">{item.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

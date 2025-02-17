@@ -208,7 +208,7 @@ const Home: React.FC = () => {
       {/* Footer Section */}
       <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-5 overflow-hidden">
         <div ref={footerRef} className="flex mt-10 items-center justify-center gap-4">
-          <AnimatedButton />
+          <AnimatedButton txt={'Launch App'}/>
           <button className="w-42 text-center flex items-center justify-center cursor-pointer h-12 rounded-4xl gap-2 bg-[#0f0f0f] text-[#a1e00d] p-3">
             <p>Follow us on X</p>
             <div className="bg-black rounded-4xl p-1">
