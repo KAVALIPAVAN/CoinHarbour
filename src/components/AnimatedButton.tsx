@@ -1,11 +1,15 @@
 import React from "react";
 
-const AnimatedButton: React.FC = ({txt}) => {
+interface AnimatedButtonProps {
+  txt: string;
+}
+
+const AnimatedButton: React.FC<AnimatedButtonProps> = ({ txt }) => {
   return (
     <button className="flex cursor-pointer w-40 h-11 items-center justify-center gap-1 rounded-4xl bg-[#a1e00d] p-3 overflow-hidden relative">
       <p className="font-medium">{txt}</p>
       <div
-        className="relative bg-black rounded-4xl  overflow-hidden"
+        className="relative bg-black rounded-4xl overflow-hidden"
         style={{ width: "1rem", height: "1rem" }}
       >
         {/* Image 1: Initially visible */}
@@ -14,7 +18,7 @@ const AnimatedButton: React.FC = ({txt}) => {
         <img src="/cross.svg" alt="icon" className="image2" />
       </div>
 
-      <style >{`
+      <style>{`
         /* Both images are absolutely positioned within the container */
         .image1,
         .image2 {
