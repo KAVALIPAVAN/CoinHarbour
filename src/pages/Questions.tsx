@@ -25,9 +25,9 @@ const Questions = () => {
 
       <section className="text-white">
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
+           initial={{ opacity: 0, y: 15 }}
            whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 2 }}
+           transition={{ duration: 1 }}
         >
           <FAQAccordion />
         </motion.div>
