@@ -4,6 +4,7 @@ import logo from "/logo.png";
 import FloatingDots from "../animation";
 import AnimatedButton from "../components/AnimatedButton";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   // Refs for animation targets
@@ -136,7 +137,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Floating Dots Section */}
-      <div ref={floatingDotsRef} className="flex flex-col items-center sm:-mt-25 -mt-15">
+      <div ref={floatingDotsRef} className="flex flex-col items-center ">
         <FloatingDots>
           <div className="bg-[url(/glow.svg)] h-[110px] bg-center bg-contain bg-no-repeat mt-10 flex justify-center items-center">
             <img src="/minilogo.svg" alt="Mini logo" className="w-[30px] h-[30px]" />
@@ -172,8 +173,8 @@ const Home: React.FC = () => {
 
         <div ref={headingRef} className="mt-5 text-center">
           <div className="md:text-[50px] text-[28px] font-[980] text-white">
-            <h1>One Click ETFs</h1>
-            <h1>& AI Strategies</h1>
+            <p>One Click ETFs</p>
+            <p className="-mt-5">& AI Strategies</p>
           </div>
           <p className="text-[#999999] text-[18px] mt-2">
             Invest in index funds, thematic baskets, & Quant strategies, or <br />
@@ -208,7 +209,7 @@ const Home: React.FC = () => {
       {/* Footer Section */}
       <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-8  overflow-hidden">
         <div ref={footerRef} className="flex mt-10 items-center justify-center gap-4">
-          <a href="https://app.coinharbour.xyz/waitlist" target="_blank"><AnimatedButton txt={'Join Waitlist'}/></a>
+          <a href="/waitlist" ><AnimatedButton txt={'Join Waitlist'}/></a>
           <a href="https://x.com/coinharbourxyz" target="_blank">
           <button className="md:w-42 w-36 text-center text-xs md:text-[16px] flex items-center justify-center cursor-pointer h-12 rounded-4xl gap-2 bg-[#0f0f0f] text-[#a1e00d] p-3">
             <p>Follow us on X</p>
