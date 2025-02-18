@@ -1,10 +1,9 @@
-
 import { useEffect, useRef } from "react";
 import logo from "/logo.png";
 import FloatingDots from "../animation";
 import AnimatedButton from "../components/AnimatedButton";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
+
 
 const Home: React.FC = () => {
   // Refs for animation targets
