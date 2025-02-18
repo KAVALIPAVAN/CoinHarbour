@@ -144,7 +144,7 @@ export default function FAQAccordion() {
     <div className=" bg-black p-1 md:p-6 ">
       <div className="mx-auto max-w-7xl">
         {/* Parent flex container for two groups */}
-        <div className="flex flex-col lg:flex-row lg:gap-6">
+        <div className="flex flex-col lg:flex-row gap-0 lg:gap-6">
           {/* Group 1 */}
           <div className="flex-1 flex flex-col ">
             {group1.map((item) => (

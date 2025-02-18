@@ -26,8 +26,8 @@ const Home: React.FC = () => {
       {
         y: 0,
         opacity: 0.3,
-        duration: 1.5,
-        stagger: 0.3,
+        duration: 1,
+        stagger: 0.15,
       }
     )
       // Floating dots section
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 1.2,
+          duration: 0.4,
           ease: "elastic.out(1.2, 0.5)",
         },
         "-=0.5"
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: 0.4,
         },
         "-=0.3"
       )
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           y: 0,
           opacity: 1,
           skewY: 0,
-          duration: 1.2,
+          duration: 0.4,
           ease: "power4.out",
         }
       )
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 1,
+          duration: 0.4,
           stagger: 0.15,
           ease: "back.out(1.7)",
         },
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 1,
+          duration: 0.4,
           stagger: 0.15,
           ease: "back.out(1.7)",
         },
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: 0.4,
           stagger: 0.1,
           ease: "sine.out",
         },
@@ -136,21 +136,21 @@ const Home: React.FC = () => {
       </div>
 
       {/* Floating Dots Section */}
-      <div ref={floatingDotsRef} className="flex flex-col items-center -mt-18">
+      <div ref={floatingDotsRef} className="flex flex-col items-center sm:-mt-25 -mt-15">
         <FloatingDots>
-          <div className="bg-[url(/glow.svg)] h-[120px] bg-center bg-contain bg-no-repeat mt-10 flex justify-center items-center">
-            <img src="/minilogo.svg" alt="Mini logo" className="w-[45px] h-[45px]" />
+          <div className="bg-[url(/glow.svg)] h-[110px] bg-center bg-contain bg-no-repeat mt-10 flex justify-center items-center">
+            <img src="/minilogo.svg" alt="Mini logo" className="w-[30px] h-[30px]" />
           </div>
         </FloatingDots>
-        <p ref={subtitleRef} className="rounded-xl bg-[#0f0f0f] text-white text-center text-sm p-1">
+        <p ref={subtitleRef} className="rounded-xl -mt-3 bg-[#0f0f0f] text-white text-center text-sm p-1">
           Let your Assets Earn for You
         </p>
       </div>
 
       {/* Investment Section */}
       <section className="lg:-mt-20">
-        <div ref={firstCardsRef} className="w-full flex justify-center items-center md:gap-[25%] overflow-hidden">
-          <div className="flex flex-col">
+        <div ref={firstCardsRef} className="w-full flex justify-center items-center md:gap-[25%] ">
+          <div className="flex flex-col md:-mt-5">
             <div className="w-full flex justify-end">
               <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
             </div>
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
               <p className="text-green-400">12.9%</p>
             </div>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col md:-mt-5">
             <div className="w-full flex">
               <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
             </div>
@@ -170,8 +170,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div ref={headingRef} className="mt-2 text-center">
-          <div className="md:text-5xl/snug text-3xl font-bold text-white">
+        <div ref={headingRef} className="mt-5 text-center">
+          <div className="md:text-[50px] text-[28px] font-[980] text-white">
             <h1>One Click ETFs</h1>
             <h1>& AI Strategies</h1>
           </div>
@@ -183,7 +183,7 @@ const Home: React.FC = () => {
 
         <div ref={secondCardsRef} className="flex items-center justify-between">
           <div className="flex md:w-[70%] mx-auto justify-between items-center">
-            <div className="flex flex-col xl:-mt-32 md:ml-16">
+            <div className="flex flex-col lg:-mt-60 ml-5">
               <div className="w-full flex justify-end">
                 <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
               </div>
@@ -192,7 +192,7 @@ const Home: React.FC = () => {
                 <p className="text-green-400">63.49%</p>
               </div>
             </div>
-            <div className="flex flex-col  xl:-mt-32">
+            <div className="flex flex-col lg:-mt-60 mr-5">
               <div className="w-full flex">
                 <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
               </div>
@@ -206,7 +206,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-5 overflow-hidden">
+      <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-8  overflow-hidden">
         <div ref={footerRef} className="flex mt-10 items-center justify-center gap-4">
           <a href="https://app.coinharbour.xyz/waitlist" target="_blank"><AnimatedButton txt={'Join Waitlist'}/></a>
           <a href="https://x.com/coinharbourxyz" target="_blank">
