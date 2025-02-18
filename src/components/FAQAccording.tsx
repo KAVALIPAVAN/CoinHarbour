@@ -141,7 +141,7 @@ export default function FAQAccordion() {
   const group2 = faqData.slice(4);
 
   return (
-    <div className=" bg-black p-6 ">
+    <div className=" bg-black p-1 md:p-6 ">
       <div className="mx-auto max-w-7xl">
         {/* Parent flex container for two groups */}
         <div className="flex flex-col lg:flex-row lg:gap-6">
@@ -150,7 +150,7 @@ export default function FAQAccordion() {
             {group1.map((item) => (
               <motion.div
                 key={item.id}
-                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""}  p-6 border border-[#141414]`}
+                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""} p-1 sm:p-6 border border-[#141414]`}
               >
                 <button
                   onClick={() => handleToggle(item.id)}
@@ -158,7 +158,7 @@ export default function FAQAccordion() {
                 >
                   <div className="flex items-center gap-4">
                     <span
-                      className={`text-xl font-bold ${
+                      className={`sm:text-xl font-bold ${
                         activeId === item.id ? "text-[#ADFF00]" : "text-white"
                       }`}
                     >
@@ -201,7 +201,7 @@ export default function FAQAccordion() {
             {group2.map((item) => (
               <motion.div
                 key={item.id}
-                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""}  p-6 border border-[#141414]`}
+                className={`rounded-lg ${activeId === item.id ? "bg-zinc-900/50" : ""}  p-1 sm:p-6 border border-[#141414]`}
               >
                 <button
                   onClick={() => handleToggle(item.id)}
@@ -209,7 +209,7 @@ export default function FAQAccordion() {
                 >
                   <div className="flex items-center gap-4">
                     <span
-                      className={`text-xl font-bold ${
+                      className={`sm:text-xl font-bold ${
                         activeId === item.id ? "text-[#ADFF00]" : "text-white"
                       }`}
                     >

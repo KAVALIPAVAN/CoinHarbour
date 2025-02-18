@@ -9,7 +9,6 @@ import Questions from "./pages/Questions"
 const App = () => {
   return (
     <div className="bg-[#050505] min-h-screen overflow-hidden">
-    
     <Home/>
     <Feature/>
     <Invest/>

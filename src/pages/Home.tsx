@@ -154,7 +154,7 @@ const Home: React.FC = () => {
             <div className="w-full flex justify-end">
               <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
             </div>
-            <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl w-40 h-14">
+            <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl h-10 w-32 p-1 md:w-40 tracking-tighter text-xs md:text-[16px] md:h-14">
               Crypto Index Fund
               <p className="text-green-400">12.9%</p>
             </div>
@@ -163,7 +163,7 @@ const Home: React.FC = () => {
             <div className="w-full flex">
               <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
             </div>
-            <div className="text-center md:ml-3 text-white p-2 bg-[#191919] rounded-xl w-44 h-14">
+            <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl h-10 w-32 p-1 md:w-40 tracking-tighter text-xs md:text-[16px] md:h-14">
               Memecoins Basket
               <p className="text-green-400">879.71%</p>
             </div>
@@ -187,7 +187,7 @@ const Home: React.FC = () => {
               <div className="w-full flex justify-end">
                 <img src="/arrowl.svg" alt="Left arrow" className="w-5" />
               </div>
-              <div className="text-center mr-3 text-white p-2 bg-[#191919] rounded-xl w-32 h-14">
+              <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl h-10 w-32 p-1 md:w-40 tracking-tighter text-xs md:text-[16px] md:h-14">
                 US Coins ETF
                 <p className="text-green-400">63.49%</p>
               </div>
@@ -196,7 +196,7 @@ const Home: React.FC = () => {
               <div className="w-full flex">
                 <img src="/arrowr.svg" alt="Right arrow" className="w-5" />
               </div>
-              <div className="text-center ml-3 text-white p-2 bg-[#191919] rounded-xl w-44 h-14">
+              <div className="text-center md:mr-3 text-white md:p-2 bg-[#191919] rounded-xl h-10 w-32 p-1 md:w-40 tracking-tighter text-xs md:text-[16px] md:h-14">
                 ETH Oscillator Agent
                 <p className="text-green-400">37.82%</p>
               </div>
@@ -208,13 +208,16 @@ const Home: React.FC = () => {
       {/* Footer Section */}
       <footer className="bg-[url(/down.svg)] bg-no-repeat w-full bg-cover h-[200px] -mt-5 overflow-hidden">
         <div ref={footerRef} className="flex mt-10 items-center justify-center gap-4">
-          <AnimatedButton txt={'Launch App'}/>
-          <button className="w-42 text-center flex items-center justify-center cursor-pointer h-12 rounded-4xl gap-2 bg-[#0f0f0f] text-[#a1e00d] p-3">
+          <a href="https://app.coinharbour.xyz/waitlist" target="_blank"><AnimatedButton txt={'Join Waitlist'}/></a>
+          <a href="https://x.com/coinharbourxyz" target="_blank">
+          <button className="md:w-42 w-36 text-center text-xs md:text-[16px] flex items-center justify-center cursor-pointer h-12 rounded-4xl gap-2 bg-[#0f0f0f] text-[#a1e00d] p-3">
             <p>Follow us on X</p>
             <div className="bg-black rounded-4xl p-1">
               <img src="/cross.svg" alt="Cross icon" className="rotate-img text-[20px]" />
             </div>
           </button>
+          </a>
+         
         </div>
       </footer>
 

@@ -6,7 +6,7 @@ interface AnimatedButtonProps {
 
 const AnimatedButton: React.FC<AnimatedButtonProps> = ({ txt }) => {
   return (
-    <button className="flex cursor-pointer w-40 h-11 items-center justify-center gap-1 rounded-4xl bg-[#a1e00d] p-3 overflow-hidden relative">
+    <button className="flex cursor-pointer sm:w-40 h-11 items-center justify-center gap-1 rounded-4xl bg-[#a1e00d] p-3 overflow-hidden relative">
       <p className="font-medium">{txt}</p>
       <div
         className="relative bg-black rounded-4xl overflow-hidden"
